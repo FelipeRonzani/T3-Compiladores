@@ -11,23 +11,23 @@
 ## Observações
 ### Erros Críticos:
 ### Detecção de Tokens Inválidos:
-#### Tokens como * e ; são identificados corretamente como inválidos no analisador léxico. No entanto: Esses tokens geram erros que interrompem o fluxo da análise. Não há continuidade clara para tratar o restante do código após esses erros.
+Tokens como * e ; são identificados corretamente como inválidos no analisador léxico. No entanto: Esses tokens geram erros que interrompem o fluxo da análise. Não há continuidade clara para tratar o restante do código após esses erros.
 ### Problemas Sintáticos em Estruturas de Controle:
-#### No arquivo exemplo5.txt, o token diferente não foi reconhecido como parte das estruturas de controle, indicando uma lacuna na gramática sintática para comandos como enquanto e se.
+No arquivo exemplo5.txt, o token diferente não foi reconhecido como parte das estruturas de controle, indicando uma lacuna na gramática sintática para comandos como enquanto e se.
 ### Tokens Extra ou Erros de Codificação:
-#### Erros como Ã e ¡ nos arquivos de exemplo (exemplo2.txt) indicam problemas de codificação (provavelmente UTF-8 mal interpretado ou símbolos fora do escopo da linguagem). Esses erros não são recuperados corretamente, prejudicando a análise.
+Erros como Ã e ¡ nos arquivos de exemplo (exemplo2.txt) indicam problemas de codificação (provavelmente UTF-8 mal interpretado ou símbolos fora do escopo da linguagem). Esses erros não são recuperados corretamente, prejudicando a análise.
 ### Erros em Atribuições e Declarações:
-#### O arquivo exemplo4.txt apresentou erros em atribuições como Variaval = Teste + Nada, onde o token Nada não estava definido, mas foi aceito como identificador válido.
+O arquivo exemplo4.txt apresentou erros em atribuições como Variaval = Teste + Nada, onde o token Nada não estava definido, mas foi aceito como identificador válido.
 ### Erros em Atribuições e Declarações:
-#### O arquivo exemplo4.txt apresentou erros em atribuições como Variaval = Teste + Nada, onde o token Nada não estava definido, mas foi aceito como identificador válido.
+O arquivo exemplo4.txt apresentou erros em atribuições como Variaval = Teste + Nada, onde o token Nada não estava definido, mas foi aceito como identificador válido.
 ### Falta de Mensagens Detalhadas em Alguns Erros:
-#### No analisador sintático, os erros sintáticos carecem de mensagens que expliquem por que um token específico foi inesperado, dificultando o rastreamento do problema.
+No analisador sintático, os erros sintáticos carecem de mensagens que expliquem por que um token específico foi inesperado, dificultando o rastreamento do problema.
 ### Acertos
 ### Reconhecimento Léxico:
-###A maioria dos tokens válidos foi corretamente identificada, incluindo identificadores, números, operadores (x, +, -, /) e palavras reservadas (inteiro, inicio, fim, etc.).
+A maioria dos tokens válidos foi corretamente identificada, incluindo identificadores, números, operadores (x, +, -, /) e palavras reservadas (inteiro, inicio, fim, etc.).
 ### Estruturas Bem Reconhecidas:
-###Declarações de variáveis e funções foram corretamente reconhecidas, como _Fazalgo e _Fazalgo2, com seus respectivos parâmetros.
+Declarações de variáveis e funções foram corretamente reconhecidas, como _Fazalgo e _Fazalgo2, com seus respectivos parâmetros.
 ### Análise de Expressões Matemáticas:
-####Expressões como Variavel + 3 - 5 x 2 / 2 + Teste foram reconhecidas corretamente e estruturadas no analisador sintático.
-###Mensagens de Reconhecimento:
-### Mensagens como "Declaração reconhecida", "Atribuição reconhecida" e "Chamada de função reconhecida" fornecem uma visão clara do que foi processado corretamente.
+Expressões como Variavel + 3 - 5 x 2 / 2 + Teste foram reconhecidas corretamente e estruturadas no analisador sintático.
+### Mensagens de Reconhecimento:
+Mensagens como "Declaração reconhecida", "Atribuição reconhecida" e "Chamada de função reconhecida" fornecem uma visão clara do que foi processado corretamente.
