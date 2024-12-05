@@ -22,7 +22,7 @@ O arquivo exemplo4.txt apresentou erros em atribuições como Variaval = Teste +
 O arquivo exemplo4.txt apresentou erros em atribuições como Variaval = Teste + Nada, onde o token Nada não estava definido, mas foi aceito como identificador válido.
 ### Falta de Mensagens Detalhadas em Alguns Erros:
 No analisador sintático, os erros sintáticos carecem de mensagens que expliquem por que um token específico foi inesperado, dificultando o rastreamento do problema.
-### Acertos
+### Acertos:
 ### Reconhecimento Léxico:
 A maioria dos tokens válidos foi corretamente identificada, incluindo identificadores, números, operadores (x, +, -, /) e palavras reservadas (inteiro, inicio, fim, etc.).
 ### Estruturas Bem Reconhecidas:
@@ -31,3 +31,21 @@ Declarações de variáveis e funções foram corretamente reconhecidas, como _F
 Expressões como Variavel + 3 - 5 x 2 / 2 + Teste foram reconhecidas corretamente e estruturadas no analisador sintático.
 ### Mensagens de Reconhecimento:
 Mensagens como "Declaração reconhecida", "Atribuição reconhecida" e "Chamada de função reconhecida" fornecem uma visão clara do que foi processado corretamente.
+### Melhorias:
+### Recuperação de Erros Léxicos e Sintáticos:
+Implementar estratégias de recuperação para continuar analisando o código após encontrar erros. Por exemplo, ignorar tokens inválidos e continuar a análise após detectar um erro sintático em um bloco.
+### Mensagens de Erros Informativas:
+Fornecer detalhes sobre por que um token foi inesperado, por exemplo, "Token diferente inesperado porque não faz parte da gramática de condições".
+### Validação de Codificação:
+Garantir que os arquivos sejam interpretados corretamente em UTF-8, prevenindo erros com caracteres como Ã e ¡.
+### Refinamento da Gramática:
+Expandir a gramática para incluir todos os casos descritos nos exemplos, comandos "enquanto" e "se". Além de validação de identificadores em casos como "Nada".
+### Avisos Não Resolvidos:
+Remover a regra empty não utilizada para evitar avisos..
+### Maiores Dificuldades Identificadas:
+### Conformidade com a Especificação:
+A gramática ainda não cobre todos os casos definidos pelos exemplos, especialmente condições e controle de fluxo.
+### Gerenciamento de Erros:
+A análise é interrompida com frequência em caso de erros, dificultando a análise completa de arquivos que contenham múltiplos problemas.
+### Erros em Arquivos de Teste:
+Muitos dos problemas vêm de inconsistências nos arquivos de entrada. Esses erros tornam a validação mais desafiadora, pois podem confundir se são problemas da entrada ou do analisador.
